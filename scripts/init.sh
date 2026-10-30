@@ -31,6 +31,13 @@ done
 if [ ! -d .git ]; then
   git init -q && echo "[+] git init"
 fi
+# 키트 폴더가 과제 폴더 안에 있으면 제출물 커밋에 섞이지 않게 로컬에서만 제외한다
+KIT_REL="$(realpath --relative-to="$(pwd)" "$KIT" 2>/dev/null || echo "")"
+case "$KIT_REL" in
+  ""|..*|/*) ;;
+  *) grep -qxF "$KIT_REL/" .git/info/exclude 2>/dev/null || echo "$KIT_REL/" >> .git/info/exclude ;;
+esac
+
 git config user.name >/dev/null || git config user.name "candidate"
 git config user.email >/dev/null || git config user.email "candidate@example.com"
 git add AGENTS.md docs
