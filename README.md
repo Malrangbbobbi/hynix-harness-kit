@@ -15,18 +15,17 @@ SK하이닉스 AI 해커톤 2차 예선용 **작업 하네스 키트**.
 | `scripts/init.sh` | 위 파일들을 과제 폴더에 한 번에 복사하고 첫 커밋 |
 
 ## 시험 당일 사용법
+과제 폴더(작업 공간) 터미널에서 아래 3줄을 순서대로 입력한다.
 ```bash
-# 1. 과제 폴더(작업 공간)에서 키트 받기
-git clone https://github.com/<내아이디>/hynix-harness-kit.git /tmp/kit
-
-# 2. 과제 폴더에 적용 (AGENTS.md + docs/ 양식 복사, 첫 커밋)
-bash /tmp/kit/scripts/init.sh .
-
-# 3. Codex 실행 후 /model 로 모델 선택
+git clone https://github.com/Malrangbbobbi/hynix-harness-kit
+bash hynix-harness-kit/scripts/init.sh .
 codex
 ```
-그다음 `prompts/PROMPTS.md`의 **[시작]** 프롬프트부터 순서대로 사용한다.
-(`/tmp/kit/prompts/PROMPTS.md`를 에디터로 열어 두면 편하다.)
+- 1줄: 키트를 `hynix-harness-kit` 폴더로 받는다.
+- 2줄: `AGENTS.md`와 `docs/` 양식 4개를 과제 폴더에 복사하고 첫 커밋을 한다.
+- 3줄: Codex 실행 후 `/model`로 모델을 선택한다.
+
+그다음 왼쪽 파일 탐색기에서 `hynix-harness-kit/prompts/PROMPTS.md`를 열고 **[시작]** 프롬프트부터 순서대로 사용한다.
 
 ## 시간 계획 (180분 기준)
 | 경과 | 단계 |
