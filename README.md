@@ -11,6 +11,7 @@ SK하이닉스 AI 해커톤 2차 예선용 **작업 하네스 키트**.
 | `templates/DECISIONS.md` | 설계 판단과 근거 |
 | `templates/VERIFICATION.md` | 검증 결과, 교차 검증, 알려진 약점 |
 | `templates/HANDOFF.md` | 현재 상태, 작업 목록, 실행 방법, 인수인계 |
+| `templates/SELF_REVIEW.md` | 제출 직전 자기 점검: 예상 질문 6유형(A~F) 기준 요약 |
 | `prompts/PROMPTS.md` | 단계별 복사용 프롬프트, 업무 담당자 인터뷰 질문, 서술형 답안 틀 |
 | `scripts/init.sh` | 위 파일들을 과제 폴더에 한 번에 복사하고 첫 커밋 |
 
@@ -22,7 +23,7 @@ bash hynix-harness-kit/scripts/init.sh .
 codex
 ```
 - 1줄: 키트를 `hynix-harness-kit` 폴더로 받는다.
-- 2줄: `AGENTS.md`와 `docs/` 양식 4개를 과제 폴더에 복사하고 첫 커밋을 한다.
+- 2줄: `AGENTS.md`와 `docs/` 양식 5개를 과제 폴더에 복사하고 첫 커밋을 한다.
 - 3줄: Codex 실행 후 `/model`로 모델을 선택한다.
 
 그다음 왼쪽 파일 탐색기에서 `hynix-harness-kit/prompts/PROMPTS.md`를 열고 **[시작]** 프롬프트부터 순서대로 사용한다.
@@ -34,6 +35,7 @@ codex
 | 15~35분 | 업무 담당자 인터뷰 → 합의문 확인 → 작업 분해 (S2~S3) |
 | 35~130분 | E2E v0 → 작업 단위 구현·검증·커밋 반복 (S4~S5) |
 | 130~150분 | 새 세션 교차 검증 → 수정 (S6) |
-| 150~165분 | 문서 정리, 알려진 약점 작성 (S7) |
-| 165~170분 | 서술형 대비: 내 코드 설명 연습 |
+| 150~160분 | 문서 정리, 알려진 약점·신뢰 근거 작성 (S7) |
+| 160~165분 | `[자기 점검]` → `docs/SELF_REVIEW.md` 작성 |
+| 165~170분 | SELF_REVIEW.md 직접 읽기 (3줄 요약, D, E) |
 | 170분 | **제출** |
